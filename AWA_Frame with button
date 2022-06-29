@@ -1,0 +1,46 @@
+import java.awt.*;
+import java.awt.event.*;
+ 
+
+
+public class AwtMyFirst extends Frame implements ActionListener {
+		
+	Button bt;
+	TextField tf;
+	
+	AwtMyFirst(){
+		
+		bt = new Button("push me");	
+		add(bt);
+		bt.setBounds(100,120,80,30);
+		bt.addActionListener(this);
+		
+		
+		tf = new TextField();
+		add(tf);
+		tf.setBounds(60,50,170,20);
+		
+		setSize(450, 450);
+		setLayout(null);
+		setVisible(true);
+		
+	}
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		 tf.setText("oh");
+		
+	}
+
+	
+	public static void main(String[] args) {
+		
+		new AwtMyFirst();
+		 
+		
+		 
+	}
+	
+}
